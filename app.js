@@ -31,14 +31,17 @@ var createNewTaskElement = function (taskString) {
   //button.delete
   var deleteButton = document.createElement("button");//delete button
   var deleteButtonImg = document.createElement("img");//delete button image
+  
+  listItem.className = 'todo__item';
 
   label.innerText = taskString;
-  label.className = 'task';
+  label.className = 'task task-title';
 
   //Each elements, needs appending
   checkBox.type = "checkbox";
+  checkBox.className = "todo__checkbox";
   editInput.type = "text";
-  editInput.className = "task";
+  editInput.className = "todo__mode-form task";
 
   editButton.innerText = "Edit"; //innerText encodes special characters, HTML does not.
   editButton.className = "edit";
